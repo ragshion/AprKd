@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinator"
+    android:background="@android:color/background_light"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/mainappbar"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true"
+        >
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/maincollapsing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/primary"
+            app:expandedTitleMarginBottom="24dp"
+            app:expandedTitleMarginEnd="48dp"
+            app:expandedTitleMarginStart="24dp"
+            app:expandedTitleTextAppearance="@style/CollapsedAppBarTopic"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/mainbackdrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@color/md_grey_50"
+                app:layout_collapseMode="parallax"/>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/maintoolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedscview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp"
+                        android:layout_centerVertical="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="4dp">
+                            <ImageView
+                                android:layout_alignParentTop="true"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/ic_no_surat"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="4dp"
+                                app:srcCompat="@drawable/ic_no_surat"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@+id/ic_no_surat"
+                                android:text="Nomor Surat"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/txtDtNoSurat"
+                            android:text="005 / XII / 001 / 0033"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"/>
+
+                        <View style="@style/Divider"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="4dp">
+                            <ImageView
+                                android:layout_alignParentTop="true"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/ic_perihal"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="4dp"
+                                app:srcCompat="@drawable/ic_perihal"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@+id/ic_perihal"
+                                android:text="Acara"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/txtDtAcara"
+                            android:text="Penerimaan mahasiswa KKN"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="@color/accent"/>
+
+                        <View style="@style/Divider"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="4dp">
+                            <ImageView
+                                android:layout_alignParentTop="true"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/ic_tempat"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="4dp"
+                                app:srcCompat="@drawable/ic_tempat"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@+id/ic_tempat"
+                                android:text="Tempat"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/txtDtTempat"
+                            android:text="Pendopo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"/>
+
+                        <View style="@style/Divider"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="4dp">
+                            <ImageView
+                                android:layout_alignParentTop="true"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/ic_tanggal_surat"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="4dp"
+                                app:srcCompat="@drawable/ic_tanggal_surat"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@+id/ic_tanggal_surat"
+                                android:text="Tanggal"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/txtDtTanggal"
+                            android:text="Senin, 22 Mei 2018"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"/>
+
+                        <View style="@style/Divider"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="4dp">
+                            <ImageView
+                                android:layout_alignParentTop="true"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/ic_jam"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="4dp"
+                                app:srcCompat="@drawable/ic_jam"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@+id/ic_jam"
+                                android:text="Waktu"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/txtDtJam"
+                            android:text="08.00 WIB"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"/>
+
+                        <View style="@style/Divider"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="4dp">
+                            <ImageView
+                                android:layout_alignParentTop="true"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/ic_peserta"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="4dp"
+                                app:srcCompat="@drawable/ic_peserta"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@+id/ic_peserta"
+                                android:text="Jumlah Peserta"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/txtDtPeserta"
+                            android:text="200"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"/>
+
+                        <View style="@style/Divider"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="4dp">
+                            <ImageView
+                                android:layout_alignParentTop="true"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/ic_penyelenggara"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="4dp"
+                                app:srcCompat="@drawable/ic_penyelenggara"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@+id/ic_penyelenggara"
+                                android:text="Penyelenggara"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/txtDtPenyelenggara"
+                            android:text="Bappeda Litbang Kab. Pekalongan"
+                            android:layout_width="match_parent"
+                            android:textColor="@color/accent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"/>
+
+                        <View style="@style/Divider"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="4dp">
+                            <ImageView
+                                android:layout_alignParentTop="true"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/ic_status"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="4dp"
+                                app:srcCompat="@drawable/ic_status"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@+id/ic_status"
+                                android:text="Status"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/txtDtStatus"
+                            android:text="Siap Digunakan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" android:layout_margin="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="4dp">
+                            <ImageView
+                                android:layout_alignParentTop="true"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/ic_perlengkapan"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="4dp"
+                                app:srcCompat="@drawable/ic_perlengkapan"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@+id/ic_perlengkapan"
+                                android:text="Perlengkapan Tambahan"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <View style="@style/Divider"/>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recycler_alat"
+                            android:scrollbars="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true">
+
+                </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnEdit"
+        android:layout_gravity="bottom|end"
+        app:fab_icon="@drawable/ic_edit_black_24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_width="wrap_content"
+        app:fab_size="normal"
+        android:layout_height="wrap_content"
+        app:fab_colorPressed="@color/floatingStreetPressed"
+        />
+
+</android.support.design.widget.CoordinatorLayout>

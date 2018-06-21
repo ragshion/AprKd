@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">APR &amp; KD</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Cari</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="pathFoto">https://aprkd-pekalongankab.online/uploads/</string>
+</resources>

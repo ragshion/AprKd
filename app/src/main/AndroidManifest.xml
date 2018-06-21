@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="online.aprkd_pekalongankab.aprkd">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo_pekalongankab"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo_pekalongankab"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+
+        <!-- [START fcm_default_icon] -->
+        <!-- Set custom def icon. This is used when no icon is set for incoming notification messages.
+             See README(https://goo.gl/l4GJaQ) for more. -->
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo_pekalongankab" />
+        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <!-- [END fcm_default_icon] -->
+
+        <!-- [START firebase_service] -->
+        <service
+            android:name=".fcm.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <!-- [END firebase_service] -->
+        <!-- [START firebase_iid_service] -->
+        <service
+            android:name=".fcm.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <!-- [END firebase_iid_service] -->
+
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.RuangActivity"
+            android:parentActivityName=".activities.MainActivity">
+
+        </activity>
+        <activity
+            android:name=".activities.PinjamKendaraanActivity"
+            android:label="Peminjaman Kendaraan">
+
+        </activity>
+        <activity
+            android:name=".activities.KendaraanActivity"
+            android:parentActivityName=".activities.PinjamKendaraanActivity"
+            android:label="Data Kendaraan">
+
+        </activity>
+        <activity
+            android:name=".activities.PinjamAlatActivity"
+            android:label="Peminjaman Peralatan">
+
+        </activity>
+        <activity
+            android:name=".activities.AlatActivity"
+            android:parentActivityName=".activities.PinjamAlatActivity"
+            android:label="Data Alat">
+
+        </activity>
+        <activity
+            android:name=".activities.KesiapanActivity"
+            android:parentActivityName=".activities.MainActivity"
+            android:label="Kesiapan">
+            <intent-filter>
+                <action android:name="online.aprkd_pekalongankab.pushnotif_TARGET_NOTIFICATION">
+
+                </action>
+                <category android:name="android.intent.category.DEFAULT">
+
+                </category>
+
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".activities.UpdateKesiapan"
+            android:theme="@style/AppTheme"
+            android:label="Ubah Kesiapan"
+            android:parentActivityName=".activities.DetailActivity">
+
+        </activity>
+        <activity
+            android:name=".activities.LoginActivity"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/AppFullScreenTheme">
+
+        </activity>
+        <activity
+            android:name=".activities.UbahKesiapanActivity"
+            android:parentActivityName=".activities.DetailActivity"
+            android:label="Ubah Kesiapan"
+            android:theme="@style/AppTheme">
+
+        </activity>
+        <activity
+            android:name=".activities.DetailActivity"
+            android:theme="@style/paralaxBar">
+
+        </activity>
+        <activity
+            android:name=".activities.DetailKendaraanActivity"
+            android:theme="@style/paralaxBar">
+
+        </activity>
+        <activity
+            android:name=".activities.DetailAlatActivity"
+            android:theme="@style/paralaxBar">
+
+        </activity>
+        <activity android:name=".activities.DetailImage"
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".activities.DetailActivity"
+            android:label="Detail Foto Kesiapan">
+
+        </activity>
+    </application>
+
+</manifest>

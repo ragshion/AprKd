@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/nama_alat"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Kursi"
+            android:textColor="@color/md_grey_900"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/jumla_alat"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="20"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            />
+
+    </LinearLayout>
+
+    <View style="@style/MiniDivider"/>
+
+</LinearLayout>

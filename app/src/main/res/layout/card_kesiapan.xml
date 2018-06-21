@@ -1,0 +1,85 @@
+<android.support.v7.widget.CardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp"
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="3dp"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_no_surat"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:text="005/XI/008/2018"
+                android:textSize="16sp"
+                android:textColor="@color/primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_peminjam"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:text="DPRD Kabupaten Pekalongan"
+                android:textSize="16sp"
+                android:textColor="@color/accent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_acara"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:text="Undangan Menghadiri rapat DPRD"
+                android:textSize="16sp"
+                android:textColor="@color/black_semi_transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <View style="@style/Divider"/>
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="4dp"
+                android:text="In Progress"
+                android:textSize="16sp"
+                android:textColor="@color/md_blue_grey_600"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_tanggal"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:text="17 Jan"
+            android:textColor="@color/colorAccent3"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
